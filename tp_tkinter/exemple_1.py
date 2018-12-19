@@ -18,7 +18,7 @@ def change_color():
     """
     global color
     color_palette = [
-        'purple', 'cyan', 'marron', 'green', 'red', 'blue', 'orange', 'yellow'
+        'purple', 'cyan', 'brown', 'green', 'red', 'blue', 'orange', 'yellow'
     ]
     color = choice(color_palette)
 
