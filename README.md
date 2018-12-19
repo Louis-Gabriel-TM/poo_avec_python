@@ -1,2 +1,3 @@
-# poo_avec_python
-Cours sur la POO avec Python (Webforce3 - formation NEA)
+# Cours sur la POO avec le langage Python
+
+Eléments pour le cours donné à Webforce3 aux étudiants de la formation NEA.
