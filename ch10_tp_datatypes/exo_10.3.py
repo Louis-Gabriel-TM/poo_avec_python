@@ -1,5 +1,5 @@
 def find_char(string, char):
-    """Utilise la fonction enumerate qui, à chaque tour de boucle, fournie un indice et le caractère associé dans la chaîne 'string'.
+    """Utilise la fonction 'enumerate' qui, à chaque tour de boucle, fournie un indice et le caractère associé dans la chaîne 'string'.
     """
     for index, c in enumerate(string):
         if c == char:
