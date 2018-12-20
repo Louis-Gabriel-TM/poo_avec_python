@@ -1,5 +1,6 @@
 def count_char(string, char):
     """La boucle 'for c in string:' donne pour valeur à la variable 'c' successivement tous les caractères de la chaîne 'string'.
+    On dit aussi que cette boucle "parcoure" la chaîne 'string'.
     """
     occurences = 0
     for c in string:
