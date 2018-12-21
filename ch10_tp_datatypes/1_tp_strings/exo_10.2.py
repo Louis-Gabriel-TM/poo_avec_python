@@ -14,8 +14,8 @@ while long_str:  # remarque : seule une chaîne vide est évaluée à False
 
 print("Les fragments :\n>>>", fragments, end='\n'*2)
 
-# Inversons l'ordre des fragments en parcourant cette liste à l'envers
-fragments = fragments[::-1]
+# Inversons la liste des fragments en lui appliquant la méthode 'reverse()'
+fragments.reverse()
 print("Les fragments en ordre inverse :\n>>>", fragments, end='\n'*2)
 
 # Recollons les fragments dans une chaîne 'result'
