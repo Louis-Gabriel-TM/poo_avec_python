@@ -1,3 +1,6 @@
+### Exemple des faisceaux de droites colorées ###
+
+
 from tkinter import Button, Canvas, Tk, LEFT, BOTTOM
 from random import choice
 
