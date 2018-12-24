@@ -35,7 +35,7 @@ color = 'dark green'
 # Création de la fenêtre
 window = Tk()
 # Création de la zone de dessin
-canvas = Canvas(window, bg='dark grey', height=400, width=400)
+canvas = Canvas(window, bg='dark grey', width=400, height=400)
 canvas.pack(side=LEFT)  # Accrochage sur la fenêtre
 # Création du boutton 'Quitter'
 btn1 = Button(window, text="Quitter", command=window.quit)
