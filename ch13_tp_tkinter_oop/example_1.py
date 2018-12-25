@@ -17,6 +17,7 @@ class Application:
         self.root.title("Code des couleurs")
 
         # dessin initial de la résistance
+        # la fonction qui suit "externalise" une partie de l'initialisation ce qui n'est pas une bonne pratique
         self.draw_resistor()
 
         # création d'une étiquette et de deux boutons
@@ -42,12 +43,12 @@ class Application:
             'green', 'blue', 'purple', 'grey', 'white'
         ]
 
-        # l'initialisation de l'instance s'achève en lançant le réceptionnaire d'événements
+        # l'initialisation de l'instance s'achève en lançant le réceptionnaire d'événements mais il vaudrait mieux le faire en dehors du constructeur
         self.root.mainloop()
 
     def draw_resistor(self):
         """Créé un canevas (zone de dessin) avec un modèle de résistance à trois bandes colorées.
-        Attention !!! Cette méthode adopte une mauvaise pratique en ajoutant des attributs 'canvas' et 'strips' en dehors du constructeur __init__.
+        Attention !!! Cette méthode ajoute les attributs 'canvas' et 'strips' en dehors du constructeur __init__. C'est une pratique à éviter : le code gagne en lisibilité immédiate mais, dans un projet ambitieux, il sera compliqué de retrouver où ces attributs ont été définis.
         """
         # création de la zone de dessin : 'canvas' est une instance de la classe 'Canvas' de tkinter
         self.canvas = Canvas(self.root, width=500, height=200, bg='ivory')
