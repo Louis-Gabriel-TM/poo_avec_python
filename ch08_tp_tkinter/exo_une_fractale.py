@@ -1,6 +1,7 @@
 # Exercice (diaporama) : une fractale
 
-from tkinter import Button, Canvas, Tk, LEFT, TOP
+from random import choice, randrange
+from tkinter import Button, Canvas, Tk, ALL, LEFT, TOP
 
 
 def plot(x, y):
@@ -10,14 +11,27 @@ def plot(x, y):
         x - 1, y - 1, x + 1, y + 1, fill='black'
     )
 
-
 def init_vertex():
-    pass
-
+    global vertex
+    canvas.delete(ALL)
+    vertex = []
+    for _ in range(3):
+        x = randrange(600)
+        y = randrange(600)
+        vertex.append((x, y))
+        plot(x, y)
 
 def plot_process():
-    pass
-
+    pt1 = choice(vertex)
+    for _ in range(50):
+        pt2 = choice(vertex)
+        middle = [
+            (pt1[0] + pt2[0]) // 2,
+            (pt1[1] + pt2[1]) // 2
+        ]
+        plot(middle[0], middle[1])
+        #canvas.update_idletasks()
+        pt1 = middle
 
 ### Programme principal ###
 
@@ -31,8 +45,10 @@ canvas = Canvas(window, width=600, height=600, bg='ivory')
 canvas.pack(side=TOP, padx=5, pady=5)
 btn_init = Button(window, text="Init", command=init_vertex)
 btn_init.pack(side=LEFT, padx=5, pady=5)
-btn_go = Button(window, text="Go", command=plot_process)
+btn_go = Button(window, text="50 iterations", command=plot_process)
 btn_go.pack(side=LEFT, padx=5, pady=5)
+btn_quit = Button(window, text="Quit", command=window.quit)
+btn_quit.pack(side=LEFT, padx=5, pady=5)
 
 # Lancement du réceptionnaire d'événements de la fenêtre
 window.mainloop()
