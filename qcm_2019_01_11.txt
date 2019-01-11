@@ -1,0 +1,177 @@
+########################################
+###                                  ###
+### QCM Programmation Orientée Objet ###
+###     Vendredi 11 janvier 2019     ###
+###    Formation Webforce3 / NEA     ###
+###                                  ###
+########################################
+
+
+
+## Question 1
+On saisie les deux lignes suivantes dans l'interpréteur :
+
+>>> n = 13
+>>> print(n % 2 == 0)
+
+Que renvoie l'interpréteur ?
+A) n % 2 == 0
+B) 1
+C) True
+D) False
+
+
+
+## Question 2
+On saisie la ligne suivante dans l'interpréteur :
+
+>>> "Welcome on board, Captain!".split(",")
+
+Que renvoie l'interpréteur ?
+A) Welcome on board, Captain!
+B) [Welcome on board, Captain!]
+C) ['Welcome on board,', 'Captain!']
+D) ['Welcome on board', ' Captain']
+
+
+
+## Question 3
+On saisie les deux lignes suivantes dans l'interpréteur :
+
+>>> s = "abcdefgh"
+>>> print(s[3:7])
+
+Que renvoie l'interpréteur ?
+A) cdefg
+B) cdef
+C) defgh
+D) defg
+
+
+
+## Question 4
+On considère le code de quatre lignes suivant :
+
+my_list = ["Monday", "Tuesday", "Wednesday"]
+my_list.append("Thursday")
+my_list.sort()
+print(my_list[1])
+
+Qu'affiche-t-il une fois exécuté ?
+A) Monday
+B) Tuesday
+C) Wednesday
+D) Thursday
+
+
+
+## Question 5
+On saisie les deux lignes suivantes dans l'interpréteur :
+
+>>> days = ['LUN', 'MAR', 'MER', 'JEU', 'VEN']
+>>> print(days[:2])
+
+Que renvoie l'interpréteur ?
+A) ['LUN', 'MAR']
+B) ['LUN', 'MAR', 'MER']
+C) ['MER']
+D) ['MER', 'JEU', 'VEN']
+
+
+
+## Question 6
+Ecrire la sortie affichée par le code suivant :
+
+for i, c in enumerate("Ok!"):
+    print(i, c, end=" ")
+
+
+
+## Question 7
+On saisie les deux lignes suivantes dans l'interpréteur :
+
+>>> colors = {'red': 'rouge', 'green' 'blue': 'bleu'}
+>>> colors['rouge']
+
+Que renvoie l'interpréteur ?
+A) 'red'
+B) {'red'}
+C) None
+D) Une exception de type KeyError
+
+
+
+## Question 8
+On saisie les trois lignes suivantes dans l'interpréteur :
+
+>>> a = set("Welcome!")
+>>> b = set("Bienvenue !")
+>>> print(a & b)
+
+Que renvoie l'interpréteur ?
+A) "Welcome!Bienvenue!"
+B) {'W', 'B', '!'}
+C) {'e', '!'}
+D) Obi-Wan Kenobi
+
+
+
+## Questions 9.a, 9.b, 9.c, 9.d, 9.e
+On considère le code suivant :
+
+class Person:
+    def __init__(self, name, year_of_birth):
+        self.name = name
+        self.yob = year_of_birth
+
+    def how_old(self):
+        return 2019 - self.yob
+
+9.a/
+Person est :
+A) un attribut
+B) une classe
+C) une instance
+D) une méthode
+
+9.b/
+__init__ est :
+A) un attribut
+B) une classe
+C) une instance
+D) une méthode
+
+9.c/
+self est :
+A) un attribut
+B) une classe
+C) une instance
+D) une méthode
+
+9.d/
+self.yob est :
+A) un attribut
+B) une classe
+C) une instance
+D) une méthode
+
+9.e/
+how_old est :
+A) un attribut
+B) une classe
+C) une instance
+D) une méthode
+
+
+
+# Question 10
+Quelle façon de réaliser un import est à proscrire de tout projet sérieux :
+A) import random
+B) import random as rd
+C) from random import *
+D) from random import choice, randrange, sample
+
+
+
+# Question 11
+Que signifie GUI ?
