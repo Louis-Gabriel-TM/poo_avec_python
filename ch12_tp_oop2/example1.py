@@ -60,5 +60,15 @@ class Ion(Atom):  # La classe 'Ion' hérite de la classe 'Atom'
 
 
 if __name__ == "__main__":
-    pass
+    print("\nTest pour un atome de Bore :")
+    atom1 = Atom(5)
+    print(atom1)
+
+    print("\nTest pour un ion Lithium de charge + 1 :")
+    ion1 = Ion(3, 1)
+    print(ion1)
+
+    print("\nTest pour un ion Oxygène de charge - 2 :")
+    ion2 = Ion(8, -2)
+    print(ion2)
     
