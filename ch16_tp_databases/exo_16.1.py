@@ -4,6 +4,9 @@ import sqlite3
 # nom du fichier contenant la base de données SQLite
 database = "music_db.sq3"
 
+f = open(database, 'w')
+f.close()
+
 """Les données à stocker dans la base de données 'music_db.sq3'
 """
 composers = [
