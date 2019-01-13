@@ -4,8 +4,8 @@ import sqlite3
 # nom du fichier contenant la base de données SQLite
 database = "music_db.sq3"
 
-f = open(database, 'w')
-f.close()
+f = open(database, 'w')  # on ouvre 'database' en écriture : s'il existe, son contenu va être écrasé ; sinon, il va être créé (dans le même dossier que le script)
+f.close()  # une fois que fichier en .sq3 est créé / vidé, on le referme : 'sqlite3' sera ensuite utilisé pour le manipulé comme une base de données
 
 """Les données à stocker dans la base de données 'music_db.sq3'
 """
@@ -35,7 +35,7 @@ En effet, si une table existe déjà, un exception 'OperationalError', interne �
 try:
     request.execute(
         """CREATE TABLE Composers
-        (name TEXT, birth_date INTEGER, death_date INTEGER)"""
+        (name TEXT, birth_date INTEGER, death_date INTEGER);"""
     )
 except sqlite3.OperationalError:
     # si l'exception est levée, c'est que la table est créée et il n'y a rien à faire de plus ici
@@ -45,7 +45,7 @@ except sqlite3.OperationalError:
 try:
     request.execute(
         """CREATE TABLE Opus
-        (composer TEXT, title TEXT, duration INTEGER, player TEXT)"""
+        (composer TEXT, title TEXT, duration INTEGER, player TEXT);"""
     )
 except sqlite3.OperationalError:
     pass
@@ -55,7 +55,7 @@ for composer in composers:
     request.execute(
         """INSERT INTO Composers
         (name, birth_date, death_date)
-        VALUES (?, ?, ?)""", composer
+        VALUES (?, ?, ?);""", composer
     )
 
 # insertion des données contenues dans la liste 'opus' dans la table 'Opus'
@@ -63,16 +63,16 @@ for op in opus:
     request.execute(
         """INSERT INTO Opus
         (composer, title, duration, player)
-        VALUES (?, ?, ?, ?)""", op
+        VALUES (?, ?, ?, ?);""", op
     )
 
 # récupérons et affichons les données de la table 'Composers' pour vérifier
-request.execute("SELECT * FROM Composers")
-print("Compositeurs >>>", list(request))
+request.execute("SELECT * FROM Composers;")
+print("Compositeurs >>>", list(request), "\n")
 
 # même chose avec la table 'Opus'
-request.execute("SELECT * FROM Opus")
-print("Opus >>>", list(request))
+request.execute("SELECT * FROM Opus;")
+print("Opus >>>", list(request), "\n")
 
 """ Attention !!! La base de données n'est modifiée que si les opérations précédentes sont "commitées"
 """
