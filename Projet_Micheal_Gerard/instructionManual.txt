@@ -1,0 +1,16 @@
+***********************            mode d'emploi            ******************
+
+1/ a la page de login pour s'identifier en tans qu'etudiant il suffit d'appuyer sur entrer
+    2/ selection entre la consultation et l'edition de fiche
+    3/ affichage des fiche disponnible si consultation
+        4/ affichage d'une fiche dès choix de la fiche
+    5/ affichage d'un formurlaire si on clique sur le bouton edition (impossible de s'enregistrer plus d'une fois)
+                
+
+6/ a la page de login pour s'identifier en tans qu'admin il suffit de s'authentifier (nom et mdp)
+    7/ selection entre edition consultation supression et modification
+        8/ si consultation affichage de la liste des fiches
+        9/ si creation affichage d'un formulaire
+        10/ si suppresion affichage de la liste des fiches plus bouton suppresion
+        11/ si modification affichage de la liste des fiches plus bouton modification
+        
