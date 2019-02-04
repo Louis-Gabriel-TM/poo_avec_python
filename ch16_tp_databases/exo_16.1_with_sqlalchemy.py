@@ -52,7 +52,7 @@ class Opus(Base):
 
 
 # On créé / vide le fichier qui accueillera la base de données
-f = open('example.db', 'w')
+f = open('music_db.sq3', 'w')
 f.close()
 
 # On définit la base de données et le SGBDR qui la gère (SQLite ici)
