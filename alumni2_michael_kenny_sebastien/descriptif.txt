@@ -1,0 +1,28 @@
+
+
+Project by Sebastien, Micheal & Kenny
+
+
+1-authentification ou creation de compte
+    bdd __ :
+    - given : etant donnée un user s'identifiant
+    - when : l'user saisi un mot de passe != (8 ou plus caractere, 1 miniscuscule, 1 majuscule,1 chiffre)
+    - then : si mot de passe erronne affichage message error
+    - when : mdp correct
+    - then : acces page user
+    apres saisi des identifiant, verification des infos dans la base.
+    a la creation de compte,  renseignement du nom utilisateur et mot de passe
+    ecriture en chiffré du user et mdp
+2-siConnection admin affichage page admin et CRUD sur toute les fiche
+    acces bdd pour afficher liste etudiant comportant nom prenom niveau de connaissance etc
+    et eregistrement dans la base
+    bdd __ :
+    - given : etant donnée un user authentifié
+    - when : le user saisie des champ != champ obligatoire pour prenom ville mail
+    - then : saisi interrompu
+    - and :  message error
+    - when : tous les champ correcte
+    - then : enregistrement dans la base
+siConnection etudiant affichage page etudiant avec crud sur fiche individuelle et read sur toutes les fiches comportant nom prenom niveau de connaissance etc
+    droit restrints sur la base
+3-
