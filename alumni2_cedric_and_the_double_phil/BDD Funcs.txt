@@ -1,0 +1,55 @@
+Given the user without account
+When attempting to log in the apps
+Then apps redirects user to create an account
+
+==============================================
+
+Given the user
+When launching the apps
+Then apps asks for credentials
+
+==============================================
+
+Given the user with an account
+When user has typed in credentials
+Then assess credentials
+And if credentials are OK, apps logs in standard mode
+
+==============================================
+
+Given the user with an account
+When user has typed in admin credentials
+Then assess credentials
+And if credentials are OK, apps logs in admin mode
+
+==============================================
+
+Given the student
+When logging in for the first time
+Then apps redirects user to profile creation
+
+==============================================
+
+Given the student who has not yet created own profile
+When aborting profile creation
+Then apps displays restricted access (Read Only)
+And displays info message
+
+==============================================
+
+Given the student who has created self profile
+When attempting to update or delete other profile
+Then apps rejects request
+And displays an error message
+
+==============================================
+
+Given the student who has created self profile
+When requesting to view profiles
+Then apps displays profiles list
+
+==============================================
+
+Given the admin
+When requesting to create/update/delete
+Then proceed with request
